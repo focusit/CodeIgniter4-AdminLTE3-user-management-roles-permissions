@@ -27,7 +27,19 @@ Installation
 ------------
 
 **1.** Get The Module
+Before you install via composer you must install fresh ci4-framework 
+ require via composer
 
+```bash
+composer create-project codeigniter4/appstarter your-project-name
+```
+After that you must set the composer.json minimum stability add with code bellow
+```
+"minimum-stability": "dev",
+```
+ 
+ add the module
+ 
  require via composer
 
 ```bash
@@ -82,6 +94,7 @@ public $views = [
 Open `app\Config\Filters.php` see at `$aliases` add with below like this.
 ```php
 public $aliases = [
+	#after the default code
 	'login'      => \Myth\Auth\Filters\LoginFilter::class,
 	'role'       => \agungsugiarto\boilerplate\Filters\RoleFilter::class,
 	'permission' => \agungsugiarto\boilerplate\Filters\PermissionFilter::class,
@@ -89,6 +102,9 @@ public $aliases = [
 ```
 
 **4.** Run publish, migrate and seed boilerplate
+```bash
+php spark migrate -all
+```
 
 ```bash
 php spark boilerplate:install
