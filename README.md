@@ -25,6 +25,7 @@ Screenshoot | Demo On [Heroku](https://boilerplate-codeigniter4.herokuapp.com/)
 
 Installation
 ------------
+first of all Install the latest version of compososer becasue composer 1.10 has been depricated.
 
 **1.** Get The Module
 Before you install via composer you must install fresh ci4-framework 
@@ -105,6 +106,13 @@ public $aliases = [
 ```bash
 php spark migrate -all
 ```
+(While migration if you encounter error sqlite3 class not found install php-sqlite using ofllowing command
+
+```bash
+sudo apt install php-sqlite3
+```
+
+
 
 ```bash
 php spark boilerplate:install
